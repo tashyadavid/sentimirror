@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "owners", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#enter-screen {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#enter-screen h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#status {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+#main-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mirror-wrapper {
+  width: 90vw;
+  padding-top: 2em;
+  height: 90vh; /* Give it less than 100vh to make room for text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mirror-wrapper video {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh; /* Reserve enough space */
+  width: 90vw;
+  text-align: center;
+  overflow: hidden;
+}
+
+#question-display {
+  padding-top: 1em;
+  height: 5vh;
+}
+
+#output {
+  height: 5vh;
+}
+#mirror {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleX(-1); /* mirror effect */
+  z-index: 1;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
